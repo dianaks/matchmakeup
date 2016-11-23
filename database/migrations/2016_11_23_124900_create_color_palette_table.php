@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateColorPaletteTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('color_palete', function (Blueprint $table) {
+        Schema::create('color_palette', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('color_name');
-            $table->string('color_code')->unique();
-            $table->string('color_hexcode')->unique();
+            $table->string('name');
+            $table->string('product_code')->unique();
+            $table->string('hexcode')->unique();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('color_palete');
+        Schema::drop('color_palette');
     }
 }
