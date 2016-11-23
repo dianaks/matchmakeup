@@ -29,7 +29,7 @@ class MainController extends Controller
     	$nama = 'diana';
     	$hasil = 95 * 17;
 
-    	$maybellinePallete = ['E4BE97','E0B48F','E2AA77','E6B280','E5B177','D19B6C']
+    	$maybellinePallete = ['E4BE97','E0B48F','E2AA77','E6B280','E5B177','D19B6C'];
         return view('home', ['nama'=> $nama, 'hasil'=> $hasil, 'abc'=> $topFive]); // Menampilkan halaman home
 
     }
